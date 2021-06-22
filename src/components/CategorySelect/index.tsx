@@ -7,10 +7,11 @@ import { Category } from "../Category";
 import { styles } from "./styles";
 
 type Props = {
-  categorySelected: number;
+  categorySelected: string;
+  setCategory: (categoryId: string) => void;
 };
 
-export function CategorySelect({ categorySelected }: Props) {
+export function CategorySelect({ categorySelected, setCategory }: Props) {
   return (
     <ScrollView
       style={styles.container}
@@ -23,7 +24,8 @@ export function CategorySelect({ categorySelected }: Props) {
           key={category.id}
           title={category.title}
           icon={category.icon}
-          checked={category.id === categorySelected}
+          checked={category.id === +categorySelected}
+          onPress={() => setCategory(String(category.id))}
         />
       ))}
     </ScrollView>

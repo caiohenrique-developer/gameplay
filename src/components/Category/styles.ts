@@ -19,7 +19,14 @@ export const styles = StyleSheet.create({
     alignItems: "center",
     paddingVertical: 7,
   },
-  checked: {},
+  checked: {
+    width: 10,
+    height: 10,
+    backgroundColor: theme.colors.primary,
+    alignSelf: "flex-end",
+    marginRight: 7,
+    borderRadius: 3,
+  },
   check: {
     width: 12,
     height: 12,
