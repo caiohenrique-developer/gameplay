@@ -10,7 +10,7 @@ import { theme } from "../../global/styles/theme";
 type Props = RectButtonProps & {
   title: string;
   icon: React.FC<SvgProps>;
-  hasCheckBox: boolean;
+  hasCheckBox?: boolean;
   checked?: boolean;
 };
 
@@ -18,7 +18,7 @@ export function Category({
   title,
   icon: Icon,
   checked = true,
-  hasCheckBox = true,
+  hasCheckBox = false,
   ...rest
 }: Props) {
   const { secondary40, secondary50, secondary70, secondary85 } = theme.colors;
