@@ -31,9 +31,9 @@ export function Category({
           <View style={checked ? styles.checked : styles.check} />
 
           <Icon width={48} height={48} />
-        </View>
 
-        <Text style={[styles.title]}>{title}</Text>
+          <Text style={[styles.title]}>{title}</Text>
+        </View>
       </LinearGradient>
     </RectButton>
   );

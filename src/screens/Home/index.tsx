@@ -47,7 +47,7 @@ export function Home() {
   }
 
   return (
-    <View style={styles.container}>
+    <View>
       <View style={styles.header}>
         <Profile />
         <ButtonAdd />
