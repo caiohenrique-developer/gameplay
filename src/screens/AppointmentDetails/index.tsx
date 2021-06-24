@@ -11,6 +11,7 @@ import BannerImg from "../../assets/banner.png";
 import { styles } from "./styles";
 import { ListHeader } from "../../components/ListHeader.tsx";
 import { Member } from "../../components/Member";
+import { ListDivider } from "../../components/ListDivider";
 
 export function AppointmentDetails() {
   const members = [
@@ -60,6 +61,8 @@ export function AppointmentDetails() {
         data={members}
         keyExtractor={(item) => item.id}
         renderItem={({ item }) => <Member data={item} />}
+        ItemSeparatorComponent={() => <ListDivider />}
+        style={styles.members}
       />
     </Background>
   );
