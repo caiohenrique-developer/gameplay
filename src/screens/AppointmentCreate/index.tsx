@@ -31,7 +31,7 @@ export function AppointmentCreate() {
     setOpenGuildsModal(true);
   }
 
-  function hendleGuildSelect(guildSelected: GuildProps) {
+  function handleGuildSelect(guildSelected: GuildProps) {
     setGuild(guildSelected);
     setOpenGuildsModal(false);
   }
@@ -120,7 +120,7 @@ export function AppointmentCreate() {
       </ScrollView>
 
       <ModalView visible={openGuildsModal}>
-        <Guilds hendleGuildSelect={hendleGuildSelect} />
+        <Guilds handleGuildSelect={handleGuildSelect} />
       </ModalView>
     </KeyboardAvoidingView>
   );
