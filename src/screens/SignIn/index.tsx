@@ -8,8 +8,10 @@ import { Background } from "../../components/Background";
 import { styles } from "./styles";
 
 import IllustrationImg from "../../assets/illustration.png";
+import { useAuth } from "../../hooks/auth";
 
 export function SignIn() {
+  const { user } = useAuth();
   const navigation = useNavigation();
 
   function handleSignIn() {
