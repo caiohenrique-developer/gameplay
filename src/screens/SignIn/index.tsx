@@ -11,11 +11,11 @@ import { useAuth } from "../../hooks/auth";
 import { theme } from "../../global/styles/theme";
 
 export function SignIn() {
-  const { loading, SignIn } = useAuth();
+  const { loading, signIn } = useAuth();
 
   async function handleSignIn() {
     try {
-      await SignIn();
+      await signIn();
     } catch (error) {
       Alert.alert(error);
     }
